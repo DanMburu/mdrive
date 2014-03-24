@@ -3,7 +3,7 @@
 <html>
 
 	<head>
-		<link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
 		<title>Your New Application</title>
@@ -14,41 +14,48 @@
 			*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
 			input, textarea  { -webkit-user-select:text; }
 		</style>
-		<script src="intelxdk.js"></script>
-		<script type="text/javascript">
-			/* This code is used to run as soon as Intel activates */
-			var onDeviceReady=function(){
-			//hide splash screen
-			intel.xdk.device.hideSplashScreen();
-			};
-			document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
-		</script>
+		
 		<script type="application/javascript" src="js/jquery.min.js"></script>
-		<script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+		<script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+		<script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+		<script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+		<script type="application/javascript" src="sidebar/js/swipe.js"></script>
+		<script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="application/javascript" src="marginal/marginal-position.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	</head>
 
 	<body>
 		<!-- content goes here-->
 		<div class="uwrap">
-			<div class="upage" id="mainpage" data-role="page">
+			<div class="upage" id="mainpage">
 				<div class="upage-outer">
+					<div class="uib-header header-bg container-group inner-element uib_w_17" data-uib="layout/header" data-ver="0">
+						<h2></h2>
+						<div class="widget-container wrapping-col single-centered">
+							<div class="widget uib_w_18 scale-image d-margins" data-uib="media/img" data-ver="0">
+								<figure class="figure-align">
+									<img src="logo.png">
+									<figcaption data-position="bottom"></figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="widget-container content-area horiz-area wrapping-col left"></div>
+						<div class="widget-container content-area horiz-area wrapping-col right"></div>
+					</div>
 					<div class="upage-content" id="mainsub">
 
 						<div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
 							<div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
 								<div class="widget-container content-area vertical-col">
 
-									<div class="widget uib_w_1 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
-										<ul data-role="listview">
-											<li class="widget uib_w_2" data-uib="jquery_mobile/listitem" data-ver="0"><a href="driver.html"><span>Driver</span></a>
-											</li>
-											<li class="widget uib_w_3" data-uib="jquery_mobile/listitem" data-ver="0"><a href="condoctor.html"><span>Conductor</span></a>
-											</li>
-											<li class="widget uib_w_4" data-uib="jquery_mobile/listitem" data-ver="0"><a href="witness.html"><span>Witness</span></a>
-											</li>
-										</ul>
-									</div><span class="uib_shim"></span>
+									<div class="list-group widget uib_w_8 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="0">
+										<a class="list-group-item allow-badge widget uib_w_9" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="driver.html"><h4 class="list-group-item-heading">Driver</h4></a>
+										<a class="list-group-item allow-badge widget uib_w_10" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="conductor.html"><h4 class="list-group-item-heading">Conductor</h4></a>
+										<a class="list-group-item allow-badge widget uib_w_11" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="witness.html"><h4 class="list-group-item-heading">Witness</h4></a>
+									</div>
+
+									<span class="uib_shim"></span>
 								</div>
 							</div>
 							<span class="uib_shim"></span>
@@ -56,6 +63,34 @@
 					</div>
 					<!-- /upage-content -->
 
+					<div class="inner-element uib_w_7 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe fixed" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'overlap', 'v':200, 'side':'left'}">
+						<div class="sidebar-content">
+
+							<div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+								<div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+									<div class="widget-container content-area vertical-col">
+
+										<div class="list-group widget uib_w_12 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="0">
+											<a class="list-group-item allow-badge widget uib_w_13" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="index.html">
+												<p class="list-group-item-text">Home</p>
+											</a>
+											<a class="list-group-item allow-badge widget uib_w_14" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="driver.html">
+												<p class="list-group-item-text">Driver</p>
+											</a>
+											<a class="list-group-item allow-badge widget uib_w_16 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="conductor.html">
+												<p class="list-group-item-text">Conductor</p>
+											</a>
+											<a class="list-group-item allow-badge widget uib_w_15" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="witness.html">
+												<p class="list-group-item-text">Witness</p>
+											</a>
+										</div><span class="uib_shim"></span>
+									</div>
+								</div>
+								<span class="uib_shim"></span>
+							</div>
+
+						</div>
+					</div>
 				</div>
 				<!-- /upage-outer -->
 
