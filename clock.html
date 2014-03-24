@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/flipclock.css">
+       
+	</head>
+	<body>
+		<div class="clock"></div>
+		<div class="message"></div>
+       
+        <input type="button" onClick="resetClock()" value="Reset">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/flipclock.min.js"></script>
+        
+       
+        <script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+
+			
+           
+			
+		});
+		 function resetClock(){
+			 clock = $('.clock').FlipClock(28800, {
+		        countdown: true,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('Your driving time has elapsed!');
+		        	}
+		        }
+		    });
+			}
+	</script>
+  
+    <!--
+      
+         <script>
+		 
+		$(document).ready(function(e) {
+            var clock = $('.clock').FlipClock(100,{
+			countdown:false,
+			 callbacks: {
+		        	stop: function() {
+						//alert('done');
+		        		$('.message').html('Your driving time has elapsed!');
+		        	}
+		        }
+			});
+			//clock.setTime(3600*8);
+			//clock.setTime(3);
+			clock.setCountdown(true);
+        });
+		</script>-->
+	</body>
+</html>

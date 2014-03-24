@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/driver_main.less.css" class="main-less">
+		<title>Your New Application</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<style type="text/css">
+			/* Prevent copy paste for all elements except text fields */
+			*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+			input, textarea  { -webkit-user-select:text; }
+		</style>
+		
+		<script type="application/javascript" src="js/jquery.min.js"></script>
+		<script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+        <script src="js/jquery.min.js"></script>
+		<script src="js/flipclock.min.js"></script>
+        
+        
+        <script>
+		$(document).ready(function(e) {
+			var clock;
+            $('.submit').click(function(e) {
+				$('.widget-container').slideUp();
+				/*28800 */
+				clock = $('.clock').FlipClock(10, {
+		        countdown: true,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('Your driving time has elapsed!');
+						 notify();
+		        	}
+		        }
+		    });
+              
+            });
+        });
+		</script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+         // Wait for device API libraries to load
+         //
+         document.addEventListener("deviceready", onDeviceReady, false);
+         
+         // device APIs are available
+         //
+         function onDeviceReady() {
+             // Empty
+         }
+         // Show a custom alert
+         //
+         function notify(){
+         window.plugin.notification.local.add({ message: 'Your driving time has elapsed!' });
+         }
+         
+         
+      </script>
+        <link rel="stylesheet" href="css/flipclock.css">
+	</head>
+
+	<body>
+		<!-- content goes here-->
+		<div class="uwrap">
+			<div class="upage" id="mainpage" data-role="page">
+				<div class="upage-outer">
+					<div class="upage-content" id="mainsub">
+
+						<div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<div class="widget-container content-area vertical-col">
+                                
+                                <fieldset data-role="controlgroup" class="widget-container wide-control uib-jqm-flex" data-child-name="jqm-radio-group-0">
+											<div class="ui-radio widget uib_w_2" data-uib="jquery_mobile/radio_button" data-ver="0">
+												<label>PSV
+													<input type="radio" name="jqm-radio-group-0">
+												</label>
+											</div>
+											<div class="ui-radio widget uib_w_3" data-uib="jquery_mobile/radio_button" data-ver="0">
+												<label>Private
+													<input type="radio" name="jqm-radio-group-0">
+												</label>
+											</div>
+										</fieldset>
+
+									
+									<div class="table-thing with-label widget uib_w_3 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+										<label class="narrow-control label-inline" for="licenceNo">Licence No</label>
+										<input class="wide-control" placeholder="Licence No" type="text" id="licenceNo">
+									</div>
+									<div class="table-thing with-label widget uib_w_4 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+										<label class="narrow-control label-inline" for="CarNoPlate">Car No Plate</label>
+										<input class="wide-control" placeholder="Car No Plate" type="text" id="CarNoPlate">
+									</div><a class="widget uib_w_5 d-margins submit" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b">Submit</a>
+									
+								</div>
+                                
+                                
+                              
+                                
+                                
+                                
+                                
+                                
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+                         <!-- clock -->
+                          <div id="clock">
+                                <div class="clock"></div>
+		                       <div class="message"></div>
+                           </div>
+                          <!-- /clock -->
+                        
+					</div>
+					<!-- /upage-content -->
+
+				</div>
+				<!-- /upage-outer -->
+
+			</div>
+			<!-- /upage -->
+
+		</div>
+		<!-- /uwrap -->
+	</body>
+
+</html>

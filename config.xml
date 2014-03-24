@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "mdrive.app"
+        version   = "1.1.0">
+    <name>m-drive</name>
+
+    <description>
+	Mobile drivers' guide
+    </description>
+
+    <author href="http://kendevs.com" email="dmgitau@gmail.com">
+        m-drive
+    </author>
+   
+	
+	
+   
+	
+	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+	<feature name="http://api.phonegap.com/1.0/network"/>
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="res/icon/android/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="res/icon/android/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="res/icon/android/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
+	
+    
+
+    <!--
+    <gap:splash src="res/screen/android/icon-36-ldpi.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/icon-48-mdpi"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/icon-72-hdpi.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	-->
+	
+	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
+	<gap:plugin name="com.badrit.calendar" />
+	<gap:plugin name="nl.x-services.plugins.calendar" />
+     <access origin="*"/>
+</widget>
