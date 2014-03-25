@@ -155,7 +155,7 @@ body:not(#afui) .upage-outer {
   overflow-x: hidden;
 }
 .upage-content {
-  z-index: 1;
+  z-index: 2;
 }
 #afui .upage {
   padding: 0;
@@ -237,10 +237,8 @@ body:not(#afui) .upage-outer {
 }
 @media all {
   .grid-pad {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px;
+
   }
 }
 @media all and (min-width: 0px) {
@@ -279,6 +277,7 @@ label:empty {
   display: none;
 }
 .label-inline {
+  min-width: 90px;
   vertical-align: middle;
 }
 .label-top-left,
@@ -478,4 +477,23 @@ label:empty {
   .scale-image {
     width: 200px;
   }
+}
+.menucont {
+  left: 7px;
+  position: absolute;
+  top: -35px;
+  z-index: 10;
+}
+.menuIcon {
+  cursor: pointer;
+  float: right;
+  margin-bottom: 10px;
+}
+.menuIcon i {
+  background: none repeat scroll 0 0 #A5A5A5;
+  clear: left;
+  float: left;
+  height: 6px;
+  margin-bottom: 3px;
+  width: 50px;
 }
