@@ -343,7 +343,7 @@ label:empty {
 }
 @media all {
   .bar-bg {
-    background-color: #dadada;
+    background-color: #252525;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -352,8 +352,7 @@ label:empty {
 @media all {
   .bar-gutter .sidebar-content > .grid-pad {
     padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+   
   }
 }
 .allow-badge > .badge.glyphicon {

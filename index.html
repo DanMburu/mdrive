@@ -3,7 +3,7 @@
 <html>
 
 	<head>
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
 		<title>Your New Application</title>
@@ -34,8 +34,8 @@
              // Empty
          
          var now = new Date().getTime(),
-         _60_seconds_from_now = new Date(now + 10*1000);
-         
+        // _60_seconds_from_now = new Date(now + 10*1000);
+          _60_seconds_from_now = new Date(now + 10*1000*60*8); 
          window.plugin.notification.local.add({
          id:      1, // is converted to a string
          title:   'Reminder',
@@ -44,7 +44,7 @@
          date:    _60_seconds_from_now
          });
          }
-         window.plugin.notification.local.add({ message: 'Your session has started!' });
+       
          // Show a custom alert
          //
          function test(){
