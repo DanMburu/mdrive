@@ -496,3 +496,10 @@ label:empty {
   margin-bottom: 3px;
   width: 50px;
 }
+.kkcountdown-box span {
+  font-size: 35px;
+}
+.kkcountdown-box {
+	padding:10px 10px 10px 50px;
+}
+.kkc-days,.kkc-days-text{display:none;}

@@ -50,7 +50,12 @@
          		open=true;
          	 }
           });
-		  
+		  $('.btn').click(function(e) {
+			  $('.carplate').val('');
+			  $('.comment').val('');
+            alert('Thank you. Your data has been sent successfully.');
+			
+          });
 		 });
 	</script>
 	</head>
@@ -104,11 +109,11 @@
 									
 									<div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
 										<label class="narrow-control label-inline">Car No Plate</label>
-										<input class="wide-control form-control" type="text">
+										<input class="wide-control form-control carplate" type="text">
 									</div>
 									<div class="table-thing widget uib_w_23 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="0">
 										<label class="narrow-control label-inline">Comment</label>
-										<textarea rows="2" class="wide-control form-control"></textarea>
+										<textarea rows="4" class="wide-control form-control comment"></textarea>
 									</div>
 									<button type="button" class="btn widget uib_w_24 d-margins btn-primary" data-uib="twitter%20bootstrap/button" data-ver="0"><i class="glyphicon button-icon-left" data-position="left"></i>Send</button><span class="uib_shim"></span>
 								</div>

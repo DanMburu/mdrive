@@ -23,6 +23,12 @@
 		<script type="application/javascript" src="sidebar/js/swipe.js"></script>
 		<script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         
+         <script src="js/kkcountdown.min.js" type="text/javascript"></script>
+
+        <!-- // <script src="assets/lib/sharrre/jquery.sharrre.min.js"></script> -->
+
+        <link rel="stylesheet" type="text/css" href="css/kkstyle--.css">
+        
         <script src="js/flipclock.min.js"></script>
         
         
@@ -33,11 +39,27 @@
 			}
 			
 			//alert(readCookie('username'));
+			
+				function cBack(){
+			//alert('done');
+            	console.log('THE END - Function callback!');
+            }
 			var clock;
             $('.submit').click(function(e) {
-				$('.widget-container').hide();
+				$('#mainsub .widget-container').hide();
+				
+				$(".kkcountdown-1").kkcountdown({
+                	dayText		: 'day ',
+                	daysText 	: 'days ',
+                    hoursText	: 'h ',
+                    minutesText	: 'm ',
+                    secondsText	: 's',
+                    displayZeroDays : true,
+                    callback	: cBack,
+                    rusNumbers  :   false
+                });
 				/*28800 */
-				clock = $('.clock').FlipClock(10, {
+				clock = $('.clock').FlipClock(60, {
 		        countdown: true,
 		        callbacks: {
 		        	stop: function() {
@@ -168,6 +190,7 @@
                      <!-- clock -->
                           <div id="clock">
                                 <div class="clock"></div>
+                                <span data-seconds="62" class="kkcountdown-1"></span>
 		                       <div class="message"></div>
                            </div>
                           <!-- /clock -->

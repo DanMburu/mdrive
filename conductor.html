@@ -43,7 +43,12 @@
          		open=true;
          	 }
           });
-		  
+		  $('.btn').click(function(e) {
+			  $('.carplate').val('');
+			  $('.licenceNo').val('');
+            alert('Thank you. You have successfully logged in.');
+			
+          });
 		 });
 	</script>
 	</head>
@@ -87,11 +92,11 @@
 
 									<div class="table-thing widget uib_w_20 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
 										<label class="narrow-control label-inline">Licence No</label>
-										<input class="wide-control form-control" type="text" placeholder="Licence No">
+										<input class="wide-control form-control licenceNo" type="text" placeholder="Licence No">
 									</div>
 									<div class="table-thing widget uib_w_21 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
 										<label class="narrow-control label-inline">Car No Plate</label>
-										<input class="wide-control form-control" type="text" placeholder="Car No Plate">
+										<input class="wide-control form-control carplate" type="text" placeholder="Car No Plate">
 									</div>
 									<button type="button" class="btn widget uib_w_22 d-margins btn-primary" data-uib="twitter%20bootstrap/button" data-ver="0"><i class="glyphicon button-icon-left" data-position="left"></i>Login</button><span class="uib_shim"></span>
 								</div>
