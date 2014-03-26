@@ -503,3 +503,4 @@ label:empty {
 	padding:10px 10px 10px 50px;
 }
 .kkc-days,.kkc-days-text{display:none;}
+#clock{position:relative;z-index:0;}
